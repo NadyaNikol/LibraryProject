@@ -1,0 +1,96 @@
+D:\Моя папка\Exam2\Exam2\bin\Debug\Exam2.exe.config
+D:\Моя папка\Exam2\Exam2\bin\Debug\Exam2.exe
+D:\Моя папка\Exam2\Exam2\bin\Debug\Exam2.pdb
+D:\Моя папка\Exam2\Exam2\obj\Debug\Exam2.csprojAssemblyReference.cache
+D:\Моя папка\Exam2\Exam2\obj\Debug\Exam2.Form1.resources
+D:\Моя папка\Exam2\Exam2\obj\Debug\Exam2.FormLibrary.resources
+D:\Моя папка\Exam2\Exam2\obj\Debug\Exam2.Properties.Resources.resources
+D:\Моя папка\Exam2\Exam2\obj\Debug\Exam2.csproj.GenerateResource.cache
+D:\Моя папка\Exam2\Exam2\obj\Debug\Exam2.csproj.CoreCompileInputs.cache
+D:\Моя папка\Exam2\Exam2\obj\Debug\Exam2.exe
+D:\Моя папка\Exam2\Exam2\obj\Debug\Exam2.pdb
+D:\Моя папка\Exam2\Exam2\Exam2\bin\Debug\Exam2.exe.config
+D:\Моя папка\Exam2\Exam2\Exam2\bin\Debug\Exam2.exe
+D:\Моя папка\Exam2\Exam2\Exam2\bin\Debug\Exam2.pdb
+D:\Моя папка\Exam2\Exam2\Exam2\bin\Debug\EntityFramework.dll
+D:\Моя папка\Exam2\Exam2\Exam2\bin\Debug\EntityFramework.SqlServer.dll
+D:\Моя папка\Exam2\Exam2\Exam2\bin\Debug\EntityFramework.xml
+D:\Моя папка\Exam2\Exam2\Exam2\bin\Debug\EntityFramework.SqlServer.xml
+D:\Моя папка\Exam2\Exam2\Exam2\obj\Debug\Exam2.csprojAssemblyReference.cache
+D:\Моя папка\Exam2\Exam2\Exam2\obj\Debug\Exam2.Form1.resources
+D:\Моя папка\Exam2\Exam2\Exam2\obj\Debug\Exam2.FormLibrary.resources
+D:\Моя папка\Exam2\Exam2\Exam2\obj\Debug\Exam2.Properties.Resources.resources
+D:\Моя папка\Exam2\Exam2\Exam2\obj\Debug\Exam2.csproj.GenerateResource.cache
+D:\Моя папка\Exam2\Exam2\Exam2\obj\Debug\Exam2.csproj.CoreCompileInputs.cache
+D:\Моя папка\Exam2\Exam2\Exam2\obj\Debug\Exam2.csproj.CopyComplete
+D:\Моя папка\Exam2\Exam2\Exam2\obj\Debug\Exam2.exe
+D:\Моя папка\Exam2\Exam2\Exam2\obj\Debug\Exam2.pdb
+C:\Users\student\Desktop\Exam2\Exam2\Exam2\bin\Debug\Exam2.exe.config
+C:\Users\student\Desktop\Exam2\Exam2\Exam2\bin\Debug\Exam2.exe
+C:\Users\student\Desktop\Exam2\Exam2\Exam2\bin\Debug\Exam2.pdb
+C:\Users\student\Desktop\Exam2\Exam2\Exam2\bin\Debug\EntityFramework.dll
+C:\Users\student\Desktop\Exam2\Exam2\Exam2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\student\Desktop\Exam2\Exam2\Exam2\bin\Debug\EntityFramework.xml
+C:\Users\student\Desktop\Exam2\Exam2\Exam2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\student\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.csprojAssemblyReference.cache
+C:\Users\student\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.Form1.resources
+C:\Users\student\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.formAddNewBook.resources
+C:\Users\student\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.FormLibrary.resources
+C:\Users\student\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.Properties.Resources.resources
+C:\Users\student\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.csproj.GenerateResource.cache
+C:\Users\student\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.csproj.CoreCompileInputs.cache
+C:\Users\student\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.csproj.CopyComplete
+C:\Users\student\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.exe
+C:\Users\student\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.pdb
+C:\Users\student\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.FormAddNewUser.resources
+C:\Users\Nadya\Desktop\Exam2\Exam2\Exam2\bin\Debug\Exam2.exe.config
+C:\Users\Nadya\Desktop\Exam2\Exam2\Exam2\bin\Debug\Exam2.exe
+C:\Users\Nadya\Desktop\Exam2\Exam2\Exam2\bin\Debug\Exam2.pdb
+C:\Users\Nadya\Desktop\Exam2\Exam2\Exam2\bin\Debug\EntityFramework.dll
+C:\Users\Nadya\Desktop\Exam2\Exam2\Exam2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Nadya\Desktop\Exam2\Exam2\Exam2\bin\Debug\EntityFramework.xml
+C:\Users\Nadya\Desktop\Exam2\Exam2\Exam2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Nadya\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.csprojAssemblyReference.cache
+C:\Users\Nadya\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.Form1.resources
+C:\Users\Nadya\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.formAddNewBook.resources
+C:\Users\Nadya\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.FormAddNewUser.resources
+C:\Users\Nadya\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.FormLibrary.resources
+C:\Users\Nadya\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.Properties.Resources.resources
+C:\Users\Nadya\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.csproj.GenerateResource.cache
+C:\Users\Nadya\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.csproj.CoreCompileInputs.cache
+C:\Users\Nadya\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.csproj.CopyComplete
+C:\Users\Nadya\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.exe
+C:\Users\Nadya\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.pdb
+C:\Users\Nadya\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.FormAddNewAuthor.resources
+C:\Users\student\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.FormAddNewAuthor.resources
+C:\Users\Nadya\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.FormPublishBook.resources
+C:\Users\Nadya\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.FormTable.resources
+C:\Users\student\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.FormPublishBook.resources
+C:\Users\student\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.FormTable.resources
+C:\Users\student\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.FormSaleBook.resources
+C:\Users\Nadya\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.FormSaleBook.resources
+C:\Users\Nadya\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.FormPutOff.resources
+C:\Users\student\Desktop\Exam2\Exam2\Exam2\obj\Debug\Exam2.FormPutOff.resources
+D:\загрузки\Exam2_1570809007\Exam2\Exam2\Exam2\bin\Debug\Exam2.exe.config
+D:\загрузки\Exam2_1570809007\Exam2\Exam2\Exam2\bin\Debug\Exam2.exe
+D:\загрузки\Exam2_1570809007\Exam2\Exam2\Exam2\bin\Debug\Exam2.pdb
+D:\загрузки\Exam2_1570809007\Exam2\Exam2\Exam2\bin\Debug\EntityFramework.dll
+D:\загрузки\Exam2_1570809007\Exam2\Exam2\Exam2\bin\Debug\EntityFramework.SqlServer.dll
+D:\загрузки\Exam2_1570809007\Exam2\Exam2\Exam2\bin\Debug\EntityFramework.xml
+D:\загрузки\Exam2_1570809007\Exam2\Exam2\Exam2\bin\Debug\EntityFramework.SqlServer.xml
+D:\загрузки\Exam2_1570809007\Exam2\Exam2\Exam2\obj\Debug\Exam2.csprojAssemblyReference.cache
+D:\загрузки\Exam2_1570809007\Exam2\Exam2\Exam2\obj\Debug\Exam2.Form1.resources
+D:\загрузки\Exam2_1570809007\Exam2\Exam2\Exam2\obj\Debug\Exam2.FormAddNewAuthor.resources
+D:\загрузки\Exam2_1570809007\Exam2\Exam2\Exam2\obj\Debug\Exam2.formAddNewBook.resources
+D:\загрузки\Exam2_1570809007\Exam2\Exam2\Exam2\obj\Debug\Exam2.FormAddNewUser.resources
+D:\загрузки\Exam2_1570809007\Exam2\Exam2\Exam2\obj\Debug\Exam2.FormLibrary.resources
+D:\загрузки\Exam2_1570809007\Exam2\Exam2\Exam2\obj\Debug\Exam2.FormPublishBook.resources
+D:\загрузки\Exam2_1570809007\Exam2\Exam2\Exam2\obj\Debug\Exam2.FormPutOff.resources
+D:\загрузки\Exam2_1570809007\Exam2\Exam2\Exam2\obj\Debug\Exam2.FormSaleBook.resources
+D:\загрузки\Exam2_1570809007\Exam2\Exam2\Exam2\obj\Debug\Exam2.FormTable.resources
+D:\загрузки\Exam2_1570809007\Exam2\Exam2\Exam2\obj\Debug\Exam2.Properties.Resources.resources
+D:\загрузки\Exam2_1570809007\Exam2\Exam2\Exam2\obj\Debug\Exam2.csproj.GenerateResource.cache
+D:\загрузки\Exam2_1570809007\Exam2\Exam2\Exam2\obj\Debug\Exam2.csproj.CoreCompileInputs.cache
+D:\загрузки\Exam2_1570809007\Exam2\Exam2\Exam2\obj\Debug\Exam2.csproj.CopyComplete
+D:\загрузки\Exam2_1570809007\Exam2\Exam2\Exam2\obj\Debug\Exam2.exe
+D:\загрузки\Exam2_1570809007\Exam2\Exam2\Exam2\obj\Debug\Exam2.pdb

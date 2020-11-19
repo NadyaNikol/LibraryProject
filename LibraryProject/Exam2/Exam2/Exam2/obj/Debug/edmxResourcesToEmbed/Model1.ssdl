@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LibraryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Authors">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Books">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameOfBook" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Price" Type="money" Nullable="false" />
+    <Property Name="AmountPages" Type="int" Nullable="false" />
+    <Property Name="IdTheme" Type="int" Nullable="false" />
+    <Property Name="IdAuthor" Type="int" Nullable="false" />
+    <Property Name="IdPublishingHouses" Type="int" Nullable="false" />
+    <Property Name="DateOfPublish" Type="date" Nullable="false" />
+    <Property Name="DravingOfBook" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ContinuationBook">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdBook" Type="int" Nullable="false" />
+    <Property Name="IdBook2" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DecommissionedBooks">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdBook" Type="int" Nullable="false" />
+    <Property Name="DateOfDecommissioned" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Info">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PendingBooks">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdInfo" Type="int" Nullable="false" />
+    <Property Name="IdBook" Type="int" Nullable="false" />
+    <Property Name="ExpirationDate" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PublishingHouses">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameOfPublishingHouse" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sales">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdBook" Type="int" Nullable="false" />
+    <Property Name="IdShop" Type="int" Nullable="false" />
+    <Property Name="Price" Type="money" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Shops">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameOfShop" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Stocks">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdBook" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Themes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameOfTheme" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Books__IdAuthor__3E52440B">
+    <End Role="Authors" Type="Self.Authors" Multiplicity="1" />
+    <End Role="Books" Type="Self.Books" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Authors">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Books">
+        <PropertyRef Name="IdAuthor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Books__IdPublish__3F466844">
+    <End Role="PublishingHouses" Type="Self.PublishingHouses" Multiplicity="1" />
+    <End Role="Books" Type="Self.Books" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PublishingHouses">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Books">
+        <PropertyRef Name="IdPublishingHouses" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Books__IdTheme__3D5E1FD2">
+    <End Role="Themes" Type="Self.Themes" Multiplicity="1" />
+    <End Role="Books" Type="Self.Books" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Themes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Books">
+        <PropertyRef Name="IdTheme" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Continuat__IdBoo__49C3F6B7">
+    <End Role="Books" Type="Self.Books" Multiplicity="1" />
+    <End Role="ContinuationBook" Type="Self.ContinuationBook" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Books">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ContinuationBook">
+        <PropertyRef Name="IdBook" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Continuat__IdBoo__4AB81AF0">
+    <End Role="Books" Type="Self.Books" Multiplicity="1" />
+    <End Role="ContinuationBook" Type="Self.ContinuationBook" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Books">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ContinuationBook">
+        <PropertyRef Name="IdBook2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Decommiss__IdBoo__5812160E">
+    <End Role="Books" Type="Self.Books" Multiplicity="1" />
+    <End Role="DecommissionedBooks" Type="Self.DecommissionedBooks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Books">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DecommissionedBooks">
+        <PropertyRef Name="IdBook" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PendingBo__IdBoo__5070F446">
+    <End Role="Books" Type="Self.Books" Multiplicity="1" />
+    <End Role="PendingBooks" Type="Self.PendingBooks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Books">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PendingBooks">
+        <PropertyRef Name="IdBook" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PendingBo__IdInf__4F7CD00D">
+    <End Role="Info" Type="Self.Info" Multiplicity="1" />
+    <End Role="PendingBooks" Type="Self.PendingBooks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Info">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PendingBooks">
+        <PropertyRef Name="IdInfo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Sales__IdBook__44FF419A">
+    <End Role="Books" Type="Self.Books" Multiplicity="1" />
+    <End Role="Sales" Type="Self.Sales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Books">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Sales">
+        <PropertyRef Name="IdBook" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Sales__IdShop__45F365D3">
+    <End Role="Shops" Type="Self.Shops" Multiplicity="1" />
+    <End Role="Sales" Type="Self.Sales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shops">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Sales">
+        <PropertyRef Name="IdShop" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Stocks__IdBook__5535A963">
+    <End Role="Books" Type="Self.Books" Multiplicity="1" />
+    <End Role="Stocks" Type="Self.Stocks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Books">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Stocks">
+        <PropertyRef Name="IdBook" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LibraryModelStoreContainer">
+    <EntitySet Name="Authors" EntityType="Self.Authors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Books" EntityType="Self.Books" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContinuationBook" EntityType="Self.ContinuationBook" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DecommissionedBooks" EntityType="Self.DecommissionedBooks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Info" EntityType="Self.Info" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PendingBooks" EntityType="Self.PendingBooks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PublishingHouses" EntityType="Self.PublishingHouses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sales" EntityType="Self.Sales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Shops" EntityType="Self.Shops" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stocks" EntityType="Self.Stocks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Themes" EntityType="Self.Themes" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Books__IdAuthor__3E52440B" Association="Self.FK__Books__IdAuthor__3E52440B">
+      <End Role="Authors" EntitySet="Authors" />
+      <End Role="Books" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Books__IdPublish__3F466844" Association="Self.FK__Books__IdPublish__3F466844">
+      <End Role="PublishingHouses" EntitySet="PublishingHouses" />
+      <End Role="Books" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Books__IdTheme__3D5E1FD2" Association="Self.FK__Books__IdTheme__3D5E1FD2">
+      <End Role="Themes" EntitySet="Themes" />
+      <End Role="Books" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Continuat__IdBoo__49C3F6B7" Association="Self.FK__Continuat__IdBoo__49C3F6B7">
+      <End Role="Books" EntitySet="Books" />
+      <End Role="ContinuationBook" EntitySet="ContinuationBook" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Continuat__IdBoo__4AB81AF0" Association="Self.FK__Continuat__IdBoo__4AB81AF0">
+      <End Role="Books" EntitySet="Books" />
+      <End Role="ContinuationBook" EntitySet="ContinuationBook" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Decommiss__IdBoo__5812160E" Association="Self.FK__Decommiss__IdBoo__5812160E">
+      <End Role="Books" EntitySet="Books" />
+      <End Role="DecommissionedBooks" EntitySet="DecommissionedBooks" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PendingBo__IdBoo__5070F446" Association="Self.FK__PendingBo__IdBoo__5070F446">
+      <End Role="Books" EntitySet="Books" />
+      <End Role="PendingBooks" EntitySet="PendingBooks" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PendingBo__IdInf__4F7CD00D" Association="Self.FK__PendingBo__IdInf__4F7CD00D">
+      <End Role="Info" EntitySet="Info" />
+      <End Role="PendingBooks" EntitySet="PendingBooks" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Sales__IdBook__44FF419A" Association="Self.FK__Sales__IdBook__44FF419A">
+      <End Role="Books" EntitySet="Books" />
+      <End Role="Sales" EntitySet="Sales" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Sales__IdShop__45F365D3" Association="Self.FK__Sales__IdShop__45F365D3">
+      <End Role="Shops" EntitySet="Shops" />
+      <End Role="Sales" EntitySet="Sales" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Stocks__IdBook__5535A963" Association="Self.FK__Stocks__IdBook__5535A963">
+      <End Role="Books" EntitySet="Books" />
+      <End Role="Stocks" EntitySet="Stocks" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

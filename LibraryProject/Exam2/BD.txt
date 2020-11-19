@@ -1,0 +1,150 @@
+use Library
+
+
+CREATE TABLE [dbo].[Authors]
+(
+	[Id] INT NOT NULL PRIMARY KEY identity(1,1), 
+    [FirstName] NVARCHAR(50) NOT NULL, 
+    [LastName] NVARCHAR(50) NOT NULL
+)
+
+
+CREATE TABLE [dbo].[Themes]
+(
+	[Id] INT NOT NULL PRIMARY KEY identity(1,1), 
+    [NameOfTheme] NVARCHAR(50) NOT NULL 
+)
+
+
+CREATE TABLE [dbo].[PublishingHouses]
+(
+	[Id] INT NOT NULL PRIMARY KEY identity(1,1), 
+        [NameOfPublishingHouse] NVARCHAR(50) NOT NULL
+)
+
+CREATE TABLE [dbo].[Books]
+(
+	[Id] INT NOT NULL PRIMARY KEY identity(1,1), 
+    [NameOfBook] NVARCHAR(50) NOT NULL, 
+    [Price] MONEY NOT NULL, 
+    [AmountPages] INT NOT NULL, 
+    [IdTheme] INT NOT NULL foreign key references [dbo].[Themes](Id),
+    [IdAuthor] int not null foreign key references [dbo].[Authors](Id),
+[IdPublishingHouses] int not null foreign key references [dbo].[PublishingHouses](Id),
+	[DateOfPublish] DATE NOT NULL,
+	[DravingOfBook] int not null default(1)
+)
+
+
+
+CREATE TABLE [dbo].[Shops]
+(
+	[Id] INT NOT NULL PRIMARY KEY identity(1,1), 
+        [NameOfShop] NVARCHAR(50) NOT NULL
+)
+
+
+
+CREATE TABLE [dbo].[Sales]
+(
+	[Id] INT NOT NULL PRIMARY KEY identity(1,1), 
+        [IdBook] INT NOT NULL foreign key references [dbo].[Books](Id), 
+	[IdShop] int not null foreign key references [dbo].[Shops](Id),
+        [Price] MONEY NOT NULL,
+		[Quantity] int not null default(0) check([Quantity]>=0)
+)
+
+create table ContinuationBook
+(
+	[Id] INT NOT NULL PRIMARY KEY identity(1,1), 
+	[IdBook] INT NOT NULL foreign key references [dbo].[Books](Id), 
+	[IdBook2] INT NOT NULL foreign key references [dbo].[Books](Id)
+)
+
+
+create table Info
+(
+
+	[Id] INT NOT NULL PRIMARY KEY identity(1,1),
+        [Login] NVARCHAR(50) NOT NULL,
+        [Password] NVARCHAR(50) NOT NULL 
+)
+
+
+create table PendingBooks
+(
+	[Id] INT NOT NULL PRIMARY KEY identity(1,1), 
+	[IdInfo] INT NOT NULL foreign key references [dbo].[Info](Id), 
+	[IdBook] INT NOT NULL foreign key references [dbo].[Books](Id),
+	[ExpirationDate] date NOT NULL default(DateAdd(day,7,getdate())) check ([ExpirationDate]>getdate())
+)
+
+
+
+create table Stocks
+(
+	[Id] INT NOT NULL PRIMARY KEY identity(1,1), 
+	[IdBook] INT NOT NULL foreign key references [dbo].[Books](Id) unique
+)
+
+drop table Stocks
+
+
+create table DecommissionedBooks
+(
+	[Id] INT NOT NULL PRIMARY KEY identity(1,1), 
+	[IdBook] INT NOT NULL foreign key references [dbo].[Books](Id),
+	[DateOfDecommissioned] date NOT NULL default(getdate())
+	)
+
+
+create trigger StockBooks
+on Stocks
+after insert
+as
+declare @id int
+select @id = IdBook from inserted
+update Books
+set Price = Price * 0.3
+where Id = @id
+
+
+create trigger NotStockBooks
+on Stocks
+after delete
+as
+declare @id int
+select @id = IdBook from deleted
+update Books
+set Price = Price / 0.3
+where Id = @id
+
+
+create trigger CheckPriceSale
+on Sales
+after insert, update
+as
+declare @id int, @price money
+select @id = IdBook, @price = Price from inserted
+if(@price< (select B.Price from Books as B where B.Id=@id))
+begin
+raiserror ('The selling price of a book cannot be less than the price of a book',11,1)
+rollback tran
+end
+
+create trigger CheckAmountSale2
+on Sales
+after insert, update
+as
+declare @id int, @quantity int
+select @id = IdBook, @quantity = Quantity from inserted
+if (@quantity > (Select B.DravingOfBook from Books as B where B.Id = @id)) 
+begin
+raiserror ('The number of books sold cannot exceed the number of runs',11,1)
+rollback tran
+end
+update Books
+set DravingOfBook = DravingOfBook - @quantity
+where Id = @id
+
+disable trigger CheckAmountSale on Sales
